@@ -1,6 +1,6 @@
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
-xmlns:tns="http://www.javier.rodriguez.com/actors-ws"
-targetNamespace="http://javier.rodriguez.com/actors-ws"
+xmlns:tns="http://www.javier.rodriguez/actors-ws"
+targetNamespace="http://www.javier.rodriguez/actors-ws"
 elementFormDefault="qualified">
 	<xs:element name="getActorByIdRequest">
 		<xs:complexType>
@@ -12,9 +12,7 @@ elementFormDefault="qualified">
 	<xs:element name="getActorByIdResponse">
 		<xs:complexType>
 			<xs:sequence>
-				<xs:element name="actor_id" type="xs:int" />
-				<xs:element name="first_name" type="xs:string" />
-				<xs:element name="last_name" type="xs:string" />
+				<xs:element name="actorType" type="tns:actorType" />
 			</xs:sequence>
 		</xs:complexType>
 	</xs:element>
@@ -23,6 +21,7 @@ elementFormDefault="qualified">
 			<xs:element name="actor_id" type="xs:int" />
 			<xs:element name="first_name" type="xs:string" />
 			<xs:element name="last_name" type="xs:string" />
+			<xs:element name="last_update" type="xs:date" />
 			
 		</xs:sequence>
 	</xs:complexType>
