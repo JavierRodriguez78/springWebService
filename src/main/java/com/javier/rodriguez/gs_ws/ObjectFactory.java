@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2019.04.05 a las 01:30:54 PM CEST 
+// Generado el: 2019.04.08 a las 01:43:02 PM CEST 
 //
 
 
@@ -45,11 +45,27 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetActorByIdResponse }
+     * Create an instance of {@link DeleteActorResponse }
      * 
      */
-    public GetActorByIdResponse createGetActorByIdResponse() {
-        return new GetActorByIdResponse();
+    public DeleteActorResponse createDeleteActorResponse() {
+        return new DeleteActorResponse();
+    }
+
+    /**
+     * Create an instance of {@link ServiceStatus }
+     * 
+     */
+    public ServiceStatus createServiceStatus() {
+        return new ServiceStatus();
+    }
+
+    /**
+     * Create an instance of {@link UpdateActorResponse }
+     * 
+     */
+    public UpdateActorResponse createUpdateActorResponse() {
+        return new UpdateActorResponse();
     }
 
     /**
@@ -58,6 +74,62 @@ public class ObjectFactory {
      */
     public ActorType createActorType() {
         return new ActorType();
+    }
+
+    /**
+     * Create an instance of {@link GetAllActorsResponse }
+     * 
+     */
+    public GetAllActorsResponse createGetAllActorsResponse() {
+        return new GetAllActorsResponse();
+    }
+
+    /**
+     * Create an instance of {@link AddActorRequest }
+     * 
+     */
+    public AddActorRequest createAddActorRequest() {
+        return new AddActorRequest();
+    }
+
+    /**
+     * Create an instance of {@link UpdateActorRequest }
+     * 
+     */
+    public UpdateActorRequest createUpdateActorRequest() {
+        return new UpdateActorRequest();
+    }
+
+    /**
+     * Create an instance of {@link DeleteActorRequest }
+     * 
+     */
+    public DeleteActorRequest createDeleteActorRequest() {
+        return new DeleteActorRequest();
+    }
+
+    /**
+     * Create an instance of {@link AddActorResponse }
+     * 
+     */
+    public AddActorResponse createAddActorResponse() {
+        return new AddActorResponse();
+    }
+
+    /**
+     * Create an instance of {@link GetAllActorsRequest }
+     * 
+     */
+    public GetAllActorsRequest createGetAllActorsRequest() {
+        return new GetAllActorsRequest();
+    }
+
+    /**
+     * Create an instance of {@link GetActorByIdResponse }
+     * 
+     */
+    public GetActorByIdResponse createGetActorByIdResponse() {
+        return new GetActorByIdResponse();
     }
 
 }

@@ -2,11 +2,11 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2019.04.05 a las 01:52:43 PM CEST 
+// Generado el: 2019.04.08 a las 01:43:02 PM CEST 
 //
 
 
-package com.javier.rodriguez.com.gs_ws;
+package com.javier.rodriguez.gs_ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="actorType" type="{http://www.javier.rodriguez/actors-ws}actorType"/>
+ *         &lt;element name="actor_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -36,36 +36,28 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "actorType"
+    "actorId"
 })
-@XmlRootElement(name = "getActorByIdResponse")
-public class GetActorByIdResponse {
+@XmlRootElement(name = "deleteActorRequest")
+public class DeleteActorRequest {
 
-    @XmlElement(required = true)
-    protected ActorType actorType;
+    @XmlElement(name = "actor_id")
+    protected int actorId;
 
     /**
-     * Obtiene el valor de la propiedad actorType.
+     * Obtiene el valor de la propiedad actorId.
      * 
-     * @return
-     *     possible object is
-     *     {@link ActorType }
-     *     
      */
-    public ActorType getActorType() {
-        return actorType;
+    public int getActorId() {
+        return actorId;
     }
 
     /**
-     * Define el valor de la propiedad actorType.
+     * Define el valor de la propiedad actorId.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ActorType }
-     *     
      */
-    public void setActorType(ActorType value) {
-        this.actorType = value;
+    public void setActorId(int value) {
+        this.actorId = value;
     }
 
 }

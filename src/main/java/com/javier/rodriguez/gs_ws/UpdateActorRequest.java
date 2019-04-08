@@ -2,34 +2,32 @@
 // Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.2.7 
 // Visite <a href="http://java.sun.com/xml/jaxb">http://java.sun.com/xml/jaxb</a> 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2019.04.05 a las 01:52:43 PM CEST 
+// Generado el: 2019.04.08 a las 01:43:02 PM CEST 
 //
 
 
-package com.javier.rodriguez.com.gs_ws;
+package com.javier.rodriguez.gs_ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Clase Java para actorType complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="actorType">
+ * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
  *         &lt;element name="actor_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="first_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="last_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="last_update" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,13 +37,13 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "actorType", propOrder = {
+@XmlType(name = "", propOrder = {
     "actorId",
     "firstName",
-    "lastName",
-    "lastUpdate"
+    "lastName"
 })
-public class ActorType {
+@XmlRootElement(name = "updateActorRequest")
+public class UpdateActorRequest {
 
     @XmlElement(name = "actor_id")
     protected int actorId;
@@ -53,9 +51,6 @@ public class ActorType {
     protected String firstName;
     @XmlElement(name = "last_name", required = true)
     protected String lastName;
-    @XmlElement(name = "last_update", required = true)
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar lastUpdate;
 
     /**
      * Obtiene el valor de la propiedad actorId.
@@ -119,30 +114,6 @@ public class ActorType {
      */
     public void setLastName(String value) {
         this.lastName = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad lastUpdate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getLastUpdate() {
-        return lastUpdate;
-    }
-
-    /**
-     * Define el valor de la propiedad lastUpdate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setLastUpdate(XMLGregorianCalendar value) {
-        this.lastUpdate = value;
     }
 
 }

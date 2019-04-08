@@ -10,7 +10,6 @@ package com.javier.rodriguez.gs_ws;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
 
@@ -24,9 +23,6 @@ import javax.xml.bind.annotation.XmlType;
  * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="actorType" type="{http://www.javier.rodriguez/actors-ws}actorType"/>
- *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -35,37 +31,9 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "", propOrder = {
-    "actorType"
-})
-@XmlRootElement(name = "getActorByIdResponse")
-public class GetActorByIdResponse {
+@XmlType(name = "")
+@XmlRootElement(name = "getAllActorsRequest")
+public class GetAllActorsRequest {
 
-    @XmlElement(required = true)
-    protected ActorType actorType;
-
-    /**
-     * Obtiene el valor de la propiedad actorType.
-     * 
-     * @return
-     *     possible object is
-     *     {@link ActorType }
-     *     
-     */
-    public ActorType getActorType() {
-        return actorType;
-    }
-
-    /**
-     * Define el valor de la propiedad actorType.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link ActorType }
-     *     
-     */
-    public void setActorType(ActorType value) {
-        this.actorType = value;
-    }
 
 }

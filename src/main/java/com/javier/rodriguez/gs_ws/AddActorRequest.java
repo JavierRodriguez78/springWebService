@@ -8,30 +8,25 @@
 
 package com.javier.rodriguez.gs_ws;
 
-import java.util.Date;
-
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlSchemaType;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Clase Java para actorType complex type.
+ * <p>Clase Java para anonymous complex type.
  * 
  * <p>El siguiente fragmento de esquema especifica el contenido que se espera que haya en esta clase.
  * 
  * <pre>
- * &lt;complexType name="actorType">
+ * &lt;complexType>
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="actor_id" type="{http://www.w3.org/2001/XMLSchema}int"/>
  *         &lt;element name="first_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
  *         &lt;element name="last_name" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="last_update" type="{http://www.w3.org/2001/XMLSchema}date"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -41,39 +36,17 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "actorType", propOrder = {
-    "actorId",
+@XmlType(name = "", propOrder = {
     "firstName",
-    "lastName",
-    "lastUpdate"
+    "lastName"
 })
-public class ActorType {
+@XmlRootElement(name = "addActorRequest")
+public class AddActorRequest {
 
-    @XmlElement(name = "actor_id")
-    protected int actorId;
     @XmlElement(name = "first_name", required = true)
     protected String firstName;
     @XmlElement(name = "last_name", required = true)
     protected String lastName;
-    @XmlElement(name = "last_update", required = true)
-    @XmlSchemaType(name = "date")
-    protected Date lastUpdate;
-
-    /**
-     * Obtiene el valor de la propiedad actorId.
-     * 
-     */
-    public int getActorId() {
-        return actorId;
-    }
-
-    /**
-     * Define el valor de la propiedad actorId.
-     * 
-     */
-    public void setActorId(int value) {
-        this.actorId = value;
-    }
 
     /**
      * Obtiene el valor de la propiedad firstName.
@@ -121,30 +94,6 @@ public class ActorType {
      */
     public void setLastName(String value) {
         this.lastName = value;
-    }
-
-    /**
-     * Obtiene el valor de la propiedad lastUpdate.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public Date getLastUpdate() {
-        return lastUpdate;
-    }
-
-    /**
-     * Define el valor de la propiedad lastUpdate.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setLastUpdate(Date value) {
-        this.lastUpdate = value;
     }
 
 }

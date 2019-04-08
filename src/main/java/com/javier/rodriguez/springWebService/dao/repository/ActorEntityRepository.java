@@ -7,5 +7,6 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface ActorEntityRepository extends CrudRepository<ActorEntity, Integer> {
 	
+	//	public ActorEntity findByfirstName(String name);
 
 }

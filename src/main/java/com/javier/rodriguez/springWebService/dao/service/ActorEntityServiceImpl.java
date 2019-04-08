@@ -43,19 +43,43 @@ public class ActorEntityServiceImpl implements ActorEntityService
 	@Override
 	public ActorEntity addEntity(ActorEntity entity) {
 		// TODO Auto-generated method stub
-		return null;
+		try {
+			return this.repository.save(entity);
+		}catch(Exception e)
+		{
+			e.printStackTrace();
+			return null;
+		}
 	}
 
 	@Override
 	public boolean updateEntity(ActorEntity entity) {
-		// TODO Auto-generated method stub
-		return false;
+		
+	   try {
+		
+		   this.repository.save(entity);
+		   return true;
+		   
+	   } catch (Exception e) {
+		   e.printStackTrace();
+		   return false;
+	   }
+		
 	}
 
 	@Override
 	public boolean deleteEntity(int id) {
 		// TODO Auto-generated method stub
-		return false;
+		
+		try {
+			this.repository.deleteById(id);
+			return true;
+			
+		}catch(Exception e) {
+			e.printStackTrace();
+			return false;
+		}
+		
 	}
 
 }

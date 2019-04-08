@@ -8,6 +8,8 @@
 
 package com.javier.rodriguez.gs_ws;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
@@ -25,7 +27,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="actorType" type="{http://www.javier.rodriguez/actors-ws}actorType"/>
+ *         &lt;element name="actorType" type="{http://www.javier.rodriguez/actors-ws}actorType" maxOccurs="unbounded"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -38,34 +40,39 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "", propOrder = {
     "actorType"
 })
-@XmlRootElement(name = "getActorByIdResponse")
-public class GetActorByIdResponse {
+@XmlRootElement(name = "getAllActorsResponse")
+public class GetAllActorsResponse {
 
     @XmlElement(required = true)
-    protected ActorType actorType;
+    protected List<ActorType> actorType;
 
     /**
-     * Obtiene el valor de la propiedad actorType.
+     * Gets the value of the actorType property.
      * 
-     * @return
-     *     possible object is
-     *     {@link ActorType }
-     *     
-     */
-    public ActorType getActorType() {
-        return actorType;
-    }
-
-    /**
-     * Define el valor de la propiedad actorType.
+     * <p>
+     * This accessor method returns a reference to the live list,
+     * not a snapshot. Therefore any modification you make to the
+     * returned list will be present inside the JAXB object.
+     * This is why there is not a <CODE>set</CODE> method for the actorType property.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link ActorType }
-     *     
+     * <p>
+     * For example, to add a new item, do as follows:
+     * <pre>
+     *    getActorType().add(newItem);
+     * </pre>
+     * 
+     * 
+     * <p>
+     * Objects of the following type(s) are allowed in the list
+     * {@link ActorType }
+     * 
+     * 
      */
-    public void setActorType(ActorType value) {
-        this.actorType = value;
+    public List<ActorType> getActorType() {
+        if (actorType == null) {
+            actorType = new ArrayList<ActorType>();
+        }
+        return this.actorType;
     }
 
 }

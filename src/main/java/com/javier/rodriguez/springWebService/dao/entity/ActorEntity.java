@@ -3,6 +3,7 @@ package com.javier.rodriguez.springWebService.dao.entity;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,7 +21,13 @@ public class ActorEntity implements Serializable {
 	@GeneratedValue
 	private Date last_update;
 	
-	
+	public ActorEntity() {
+		
+	}
+	public ActorEntity(String firts_name, String last_name) {
+		this.first_name = first_name;
+		this.last_name = last_name;
+	}
 	
 	public int getActor_id() {
 		return actor_id;

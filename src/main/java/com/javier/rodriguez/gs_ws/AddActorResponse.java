@@ -25,6 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
+ *         &lt;element name="serviceStatus" type="{http://www.javier.rodriguez/actors-ws}serviceStatus"/>
  *         &lt;element name="actorType" type="{http://www.javier.rodriguez/actors-ws}actorType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
@@ -36,13 +37,40 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
+    "serviceStatus",
     "actorType"
 })
-@XmlRootElement(name = "getActorByIdResponse")
-public class GetActorByIdResponse {
+@XmlRootElement(name = "addActorResponse")
+public class AddActorResponse {
 
     @XmlElement(required = true)
+    protected ServiceStatus serviceStatus;
+    @XmlElement(required = true)
     protected ActorType actorType;
+
+    /**
+     * Obtiene el valor de la propiedad serviceStatus.
+     * 
+     * @return
+     *     possible object is
+     *     {@link ServiceStatus }
+     *     
+     */
+    public ServiceStatus getServiceStatus() {
+        return serviceStatus;
+    }
+
+    /**
+     * Define el valor de la propiedad serviceStatus.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link ServiceStatus }
+     *     
+     */
+    public void setServiceStatus(ServiceStatus value) {
+        this.serviceStatus = value;
+    }
 
     /**
      * Obtiene el valor de la propiedad actorType.
